@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    width: 100%;
+    background-color: #323232;
+    position: relative;
+}
+
+.products {
+    display: grid;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 80%;
+    position: relative;
+}
+
+.product {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.6rem;
+    padding-top: 10px;
+    justify-content: center;
+    text-align: center;
+    background-color: #0009;
+    color: #ffffff;
+}
+
+h3 {
+    width: 100%;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.nop {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+button {
+    width: 50%;
+    height: 30px;
+    border-radius: 0.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover {
+    opacity: 0.5;
+    background-color: #323232;
+    color: #ffffff;
+}
+img {
+    border-radius: 0.2rem;
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
