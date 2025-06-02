@@ -1,0 +1,109 @@
+.cart-button {
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 0.2rem;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    z-index: 9999;
+    user-select: none;
+}
+
+.cart-button ~ input:checked ~ .aside-cart {
+    height: 100%;
+    display: block;
+}
+
+
+.cart-button:hover {
+    opacity: 0.5;
+    background-color: #323232;
+    color: #ffffff;
+}
+
+.aside-cart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    position: absolute;
+    background: #fff4;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    margin-top: 4.4rem;
+    backdrop-filter: blur(1px);
+    display: none;
+    width: 200px;
+    animation: aparecer 0.5s ease-out;
+}
+
+.ul-cart {
+    display: grid;
+    opacity: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    animation: fadeIn 0.3s ease-out 0.5s forwards ;
+}
+
+.li-cart {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0009;
+    color: #ffffff;
+}
+
+label {
+    text-align: center;
+}
+
+.qty-button {
+    width: 30px;
+    font-size: 1.2rem;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+img {
+    width: 50%;
+}
+
+@keyframes aparecer {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* opcional para más efecto */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

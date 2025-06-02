@@ -10,6 +10,7 @@ export function Filters () {
 
 	
 	const handleChangeMinPrice = (e) => {
+		window.scrollTo({ top: 0, behavior: "smooth" })
 		setFilters(prevState => ({
       ...prevState,
       minPrice: e.target.value
@@ -23,7 +24,7 @@ export function Filters () {
     }))
   }
   return (
-	<aside>
+	<aside className="aside-filters">
 		<label htmlFor={categoryFilterId}>Categoria:
 			<select name="categoria" id={categoryFilterId} onChange={handleChangeCategory}>
 				<option value="all">All</option>

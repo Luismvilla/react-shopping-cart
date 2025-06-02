@@ -1,11 +1,11 @@
-import { useProducts } from "../hooks/useProducts"
+import { useCart } from "../hooks/useCart"
 
 export function Footer () {
-    const {filters} = useProducts()
+    const { cart } = useCart()
     return (
-        <footer className="footer">
+        <footer className="footer-dev">
             {
-               JSON.stringify(filters)
+                JSON.stringify(cart,null, 2)
             }
         </footer>
     )
