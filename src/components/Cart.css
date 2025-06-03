@@ -31,18 +31,19 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    display: none;
     position: absolute;
     background: #fff4;
     z-index: 10;
     top: 0;
     right: 0;
     padding: 1rem;
-    margin-top: 4.4rem;
+    padding-top: 4rem;
     backdrop-filter: blur(1px);
     display: none;
     width: 200px;
     animation: aparecer 0.5s ease-out;
+    max-height: 700px;
+    overflow-y: auto;
 }
 
 .ul-cart {
